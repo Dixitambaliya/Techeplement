@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="demo.png" alt="Logo" class="logo navbar-logo">
+        <div class="navbar-toggle" id="navbar-toggle">&#9776;</div> <!-- Hamburger menu icon -->
+        <ul class="navbar-links" id="navbar-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./courses.html">Course</a></li>
+            <li><a href="./aboutus.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="container">
+            <div class="about-img">
+                <img src="https://cdn.pixabay.com/photo/2019/05/13/20/38/team-4200837_1280.jpg" alt="About Us Image">
+                <div class="about-content">
+                    <h1>About Us</h1>
+                    <p>Welcome to our course-selling platform where we provide top-notch courses designed to boost your
+                        skills and career. Our mission is to make learning accessible, engaging, and impactful.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">What courses do you offer?</button>
+                <div class="faq-answer">
+                    <p>We offer a wide range of courses in areas such as programming, data science, digital marketing,
+                        and more.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How do I enroll in a course?</button>
+                <div class="faq-answer">
+                    <p>You can enroll in a course by creating an account and following the enrollment process on the
+                        course page.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Do you offer any certificates?</button>
+                <div class="faq-answer">
+                    <p>Yes, we provide certificates upon successful completion of each course.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Students Say</h2>
+            <div class="testimonial-item">
+                <p>"The courses are well-structured and easy to follow. I've learned so much!"</p>
+                <span>- John Doe</span>
+            </div>
+            <div class="testimonial-item">
+                <p>"I appreciate the practical approach to learning. The projects are very hands-on."</p>
+                <span>- Jane Smith</span>
+            </div>
+            <div class="testimonial-item">
+                <p>"Great platform with knowledgeable instructors. Highly recommend!"</p>
+                <span>- Sarah Lee</span>
+            </div>
+        </div>
+        
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section company-info">
+                <img src="demo.png" alt="Logo" class="logo footer-logo">
+                <p>We are dedicated to providing top-notch online courses that help you advance your skills and achieve
+                    your career goals. Our expert instructors offer high-quality content to ensure your success.</p>
+            </div>
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: <a href="mailto:support@example.com">support@example.com</a></li>
+                    <li>Phone: +1 (555) 123-4567</li>
+                    <li>Address: 123 Learning Lane, Education City, EC 12345</li>
+                </ul>
+            </div>
+            <div class="footer-section categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./courses.html">Courses </a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="#category4">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+            });
+        });
+        
+    </script>
+        <script src="script.js"></script>
+</body>
+
+</html>

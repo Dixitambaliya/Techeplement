@@ -1,0 +1,84 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.contact-page {
+    padding: 20px;
+}
+
+.contact-info, .contact-form {
+    margin-bottom: 40px;
+}
+
+.contact-info h1 {
+    font-size: 28px;
+    color: #1E90FF;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #666;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details ul li {
+    margin: 10px 0;
+}
+
+.contact-details ul li a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+.contact-details ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    color: #1E90FF;
+    padding-top: 3%;
+    text-align: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}

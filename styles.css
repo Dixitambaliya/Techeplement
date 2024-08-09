@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 100%;
+    color: black;
+    margin: 0 auto; /* Removed top and bottom margins */
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: black;
+    position: absolute;
+    left: 20px;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 28px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+.navbar-logo {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    margin-right:20px;
+
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: #1E90FF;
+}
+
+/* styles.css */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Adjust as needed */
+}
+
+.hero-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top:70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Text color for better readability */
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.explore-button:hover {
+    background-color: #0056b3;
+}
+
+
+.course-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.course-description h1 {
+    font-size: 36px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.course-description p {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.courses-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the cards horizontally */
+    max-width: 1200px; /* Max width for the container */
+}
+.course-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px; /* Fixed width for cards */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for the image */
+    object-fit: cover;
+}
+
+.course-info {
+    padding: 20px;
+}
+
+.course-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.course-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.course-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: -100%; /* Initially hide the links off-screen */
+        width: 100%;
+        background-color: gray;
+        transition: left 0.3s ease;
+        border-radius: 0 0 20px 20px;
+        margin: 0;
+        top: 100%;
+        z-index: 1;
+    }
+
+    .navbar-links.active {
+        left: 0; /* Slide the links into view when active */
+    }
+
+    .navbar-links li {
+        
+        padding: 10px 0;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .course-description h1 {
+        font-size: 28px;
+    }
+
+    .course-description p {
+        font-size: 16px;
+    }
+
+    .explore-button {
+        font-size: 16px;
+    }
+}
+/* Course Detail Section */
+/* Course Detail Section */
+.course-detail-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.course-detail-card {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    align-items: center;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    margin: 20px;
+}
+
+.course-detail-info {
+    padding: 20px;
+    text-align: left;
+    flex: 1; /* Allows the info section to take up remaining space */
+}
+
+.course-detail-image {
+    width: 50%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+.course-detail-info h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.course-price {
+    margin-bottom: 20px;
+}
+
+.original-price {
+    font-size: 18px;
+    color: #888;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.discounted-price {
+    font-size: 24px;
+    color: #1E90FF;
+    font-weight: bold;
+}
+
+.enroll-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #1E90FF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.enroll-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .course-detail-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-detail-image {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .course-detail-info {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .course-detail-info h2 {
+        font-size: 28px;
+    }
+
+    .course-description {
+        font-size: 16px;
+    }
+
+    .course-price {
+        font-size: 16px;
+    }
+
+    .enroll-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+/* Footer Styling */
+/* Footer Styling */
+.footer {
+    background-color: rgb(49, 48, 48);
+    color: #fff;
+    padding: 40px 20px;
+    
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px; /* Ensures a minimum width for each section */
+}
+
+.footer-section h2, .footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-logo {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #1E90FF;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1E90FF;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+    }
+}
