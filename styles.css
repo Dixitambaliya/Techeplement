@@ -223,11 +223,12 @@ body {
         top: 60px;
         left: -100%; /* Initially hide the links off-screen */
         width: 100%;
-        background-color: gray;
+         background-color: lightblue;
         transition: left 0.3s ease;
         border-radius: 0 0 20px 20px;
         margin: 0;
         top: 100%;
+        bborder-radius: 20%;
         z-index: 1;
     }
 
